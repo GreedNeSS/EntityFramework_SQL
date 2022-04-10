@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoredFunction.Models
+namespace InitilizeDB.Models
 {
     public class User
     {

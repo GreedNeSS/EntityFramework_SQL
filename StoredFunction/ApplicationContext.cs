@@ -12,10 +12,16 @@ namespace StoredFunction
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Company> Companies { get; set; } = null!;
+        public IQueryable<User> GetUsersByAge(int age) => FromExpression(() => GetUsersByAge(age));
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost;Database=Employeedb;Trusted_Connection=True;Encrypt=False");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDbFunction(() => GetUsersByAge(def))
         }
     }
 }

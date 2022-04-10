@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using StoredFunction.Models;
+using InitilizeDB.Models;
 
-namespace StoredFunction
+namespace InitilizeDB
 {
     internal class ApplicationContext: DbContext
     {
