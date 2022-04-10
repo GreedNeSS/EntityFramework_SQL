@@ -7,6 +7,7 @@ Console.WriteLine("***** Initilize DB *****");
 
 using (ApplicationContext db = new ApplicationContext())
 {
+    db.Database.EnsureDeleted();
     db.Database.EnsureCreated();
 
     Company microsoft = new Company { Name = "Microsoft" };
