@@ -21,7 +21,7 @@ namespace StoredFunction
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDbFunction(() => GetUsersByAge(def))
+            modelBuilder.HasDbFunction(() => GetUsersByAge(default));
         }
     }
 }
